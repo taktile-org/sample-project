@@ -1,0 +1,21 @@
+
+# If this option is set only commits with a commit message starting
+# by the deployment_prefix will be deployed
+# deployment_prefix: "#deploy"
+
+service:
+
+  # The number of replicas of your service
+  # Replicas are exact copies of your service, each request will be randomly
+  # directed to each of them
+  replicas: 1
+
+  # Format: <instance_kind>.<instance_size>
+  # Only 'gp' (general purpose) instance_kind is supported for now
+  # instance_size can be: small, medium, large, xlarge, or xxlarge
+  instance_type: gp.small
+
+  # Can be rest or grpc
+  service_type: rest
+
+version: 0.3.15
